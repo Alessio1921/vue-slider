@@ -3,6 +3,7 @@ const app= new Vue({
   el: '#app',
   data:{
     indexImg:0,
+    scrollIndex:null,
     photos:[
       {
         name: "Milano",
@@ -50,7 +51,17 @@ const app= new Vue({
     },
     choiceImg(indexT){
       this.indexImg=indexT;
+    },
+    scroll(){
+      this.scrollIndex= setInterval( ()=>{
+        this.next();
+      },3000);
+    },
+    stopScroll(){
+      this.scroll=null;
     }
+  },
+  beforeMount(){
+    this.scroll()
   }
-  
 })
