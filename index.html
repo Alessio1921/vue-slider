@@ -43,7 +43,7 @@
                 </div>
               </div>
               <div class="my-thumbnails position-relative" >
-                <img :src="photo.image" :id="photo.name" :alt="photo.name" v-for="(photo,index) in photos" :class="(index===indexImg) ? 'active' : '' "></img>
+                <img :src="photo.image" :id="photo.name" :alt="photo.name" v-for="(photo,index) in photos" :class="(index===indexImg) ? 'active' : '' " @click="choiceImg(index)"></img>
                 <!-- prev -->
                 <div class="my-previous position-absolute" @click="prev()">
                     <span class="my-prev-hook"></span>

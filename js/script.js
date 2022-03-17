@@ -47,6 +47,9 @@ const app= new Vue({
       else{
         this.indexImg--;
       }
+    },
+    choiceImg(indexT){
+      this.indexImg=indexT;
     }
   }
   
