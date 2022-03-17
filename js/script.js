@@ -4,6 +4,7 @@ const app= new Vue({
   data:{
     indexImg:0,
     scrollIndex:null,
+    clicked:false,
     photos:[
       {
         name: "Milano",
@@ -52,9 +53,18 @@ const app= new Vue({
     choiceImg(indexT){
       this.indexImg=indexT;
     },
-    scroll(){
-      this.scrollIndex= setInterval( ()=>{
-        this.next();
+    scroll(isClicked=false){
+        if(isClicked==true){
+          this.clicked= !this.clicked;
+        }
+        this.stopScroll();
+        this.scrollIndex= setInterval( ()=>{
+          if(this.clicked==false){
+            this.next();
+          }
+          else{
+            this.prev();
+          }
       },3000);
     },
     stopScroll(){

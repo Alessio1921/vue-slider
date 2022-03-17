@@ -24,13 +24,13 @@
   </head>
   <body>
 
-  <main>
+  <main id="app">
     <div class="container-fluid p-5">
       <div class="row text-center">
         <div class="col-12 p-3" id="my-before-carousel">
         </div>
 
-        <div id="app" class="col-12 p-5">
+        <div class="col-12 p-5">
             <div class="my-carousel-container d-flex flex-column px-5 align-items-center" id="my-carousel"  @mouseover="stopScroll()" @mouseleave="scroll()">
               <div class="my-carousel-images">
                 <!-- immagini -->
@@ -57,7 +57,7 @@
         </div>
 
         <div class="col-12 p-3" id="my-after-carousel">
-
+          <button class="btn btn-primary" id="reverse" @click="scroll(true)">Inverti</button>
         </div>
       </div>
     </div>
