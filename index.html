@@ -45,12 +45,12 @@
               <div class="my-thumbnails position-relative" >
                 <img :src="photo.image" :id="photo.name" :alt="photo.name" v-for="(photo,index) in photos" :class="(index===indexImg) ? 'active' : '' "></img>
                 <!-- prev -->
-                <div class="my-previous position-absolute">
+                <div class="my-previous position-absolute" @click="prev()">
                     <span class="my-prev-hook"></span>
                 </div>
                 <!-- next -->
-                <div class="my-next position-absolute">
-                    <span class="my-next-hook"></span>
+                <div class="my-next position-absolute" @click="next()">
+                    <span class="my-next-hook" ></span>
                 </div>
               </div>
             </div>

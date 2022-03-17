@@ -1,3 +1,4 @@
+Vue.config.devtools=true;
 const app= new Vue({
   el: '#app',
   data:{
@@ -31,7 +32,22 @@ const app= new Vue({
     ]
   },
   methods:{
-
+    next(){
+      if(this.indexImg == this.photos.length-1){
+        this.indexImg=0;
+      }
+      else{
+        this.indexImg++;
+      }
+    },
+    prev(){
+      if(this.indexImg == 0){
+        this.indexImg=this.photos.length - 1;
+      }
+      else{
+        this.indexImg--;
+      }
+    }
   }
   
 })
