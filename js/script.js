@@ -58,7 +58,8 @@ const app= new Vue({
       },3000);
     },
     stopScroll(){
-      this.scroll=null;
+      clearInterval(this.scrollIndex);
+      this.scrollIndex=null;
     }
   },
   beforeMount(){

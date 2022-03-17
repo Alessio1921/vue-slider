@@ -31,7 +31,7 @@
         </div>
 
         <div id="app" class="col-12 p-5">
-            <div class="my-carousel-container d-flex flex-column px-5 align-items-center" id="my-carousel">
+            <div class="my-carousel-container d-flex flex-column px-5 align-items-center" id="my-carousel"  @mouseover="stopScroll()" @mouseleave="scroll()">
               <div class="my-carousel-images">
                 <!-- immagini -->
                 <div class="my-items position-relative"  v-for="(photo,index) in photos" :class="(index===indexImg) ? 'active' : '' ">
